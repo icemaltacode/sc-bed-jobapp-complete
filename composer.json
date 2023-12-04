@@ -10,10 +10,7 @@
     },
     "scripts": {
         "post-update-cmd": [
-            "rm -rf src/client/lib/bootstrap",
-            "rm -rf src/client/lib/bootstrap-icons",
-            "cp -R vendor/twbs/bootstrap/dist src/client/lib/bootstrap",
-            "cp -R vendor/twbs/bootstrap-icons/font src/client/lib/bootstrap-icons"
+            "php copylibs.php"
         ]
     }
 }
