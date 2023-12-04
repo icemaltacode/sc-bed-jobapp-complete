@@ -1,0 +1,19 @@
+{
+    "require": {
+        "twbs/bootstrap": "^5.3",
+        "twig/twig": "^3.8",
+        "twbs/bootstrap-icons": "^1.11",
+        "altorouter/altorouter": "^2.0" 
+    },
+    "autoload": {
+        "psr-4": {"com\\icemalta\\jobapp\\": "src/"}
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "rm -rf src/client/lib/bootstrap",
+            "rm -rf src/client/lib/bootstrap-icons",
+            "cp -R vendor/twbs/bootstrap/dist src/client/lib/bootstrap",
+            "cp -R vendor/twbs/bootstrap-icons/font src/client/lib/bootstrap-icons"
+        ]
+    }
+}
